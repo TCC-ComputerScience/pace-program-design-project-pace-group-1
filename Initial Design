@@ -1,0 +1,12 @@
+// Store ~ in  each position 
+// Pre: myArray declared
+//      rowMax holds the max rows to search
+// Post: myArray holds ~ in each position
+void InitArray(/* in & out / char myArray[][10], / in */ int rowMax){
+
+    // initialize array to all ~
+    for(int row = 0; row < rowMax; row++){
+        for (int col = 0; col < rowMax; col++){
+            myArray[row][col] = '~';
+        }
+    }
