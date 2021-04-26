@@ -1,0 +1,49 @@
+// Linked List 3 Part 1
+// Pace Group 1
+// Some function prototypes have be used from Linked List 2
+
+struct NodeType
+{
+    string lastName;
+    string firstName;
+    string phoneNumber;
+    NodeType *next;
+};
+
+
+
+// Prompt the user for the file and open it
+// Pre: inData is initialized
+// Post: The file is opened and ready to be used
+void GetTheFile(/* in & out */ ifstream &inData, /* in & out*/ string &fileName);
+
+// Prints out all elements in the list
+// Pre: currPtr must point to a valid list, or nullptr
+// Post: Print all elements in list, if any
+void PrintList(/* in */ NodeType *currPtr);
+
+// Read in the card information from the user
+// Pre: The struct NodeType and data type has been declared
+// Post: newNodePtr contains the next course in the file
+//       newNodePtr is passed by reference back
+void GetCardData (/* in & out */ NodeType *&newNodePtr);
+
+// Creates a node
+// Pre: None
+// Post: Returns a pointer to NodeType with component set to -1 and next set to nullptr
+NodeType *CreateNode();
+
+// Adds a node
+// Pre: listPtr set to head of a list or to nullptr
+//      newNodePtr has been assigned to a valid node and contains a valid component
+// Post: listPtr is updated so a node is added to the linked list in the correct position
+void AddNode(/* in & out */ NodeType *&listPtr, NodeType *newNodePtr);
+
+// Deletes a node
+// Pre: NodeType is declared
+//      listPtr holds the first location of the list
+// Post: the node that the user wanted has been deleted
+void DeleteNode(/* in & out */ NodeType *&listPtr, /* in */ int delValue);
+
+
+int main(){}
