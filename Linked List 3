@@ -1,6 +1,7 @@
 // Linked List 3 Part 1
 // Pace Group 1
 // Some function prototypes have be used from Linked List 2
+// Some function prototypes have been modified from Sean's Program 4
 
 struct NodeType
 {
@@ -44,6 +45,14 @@ void AddNode(/* in & out */ NodeType *&listPtr, NodeType *newNodePtr);
 //      listPtr holds the first location of the list
 // Post: the node that the user wanted has been deleted
 void DeleteNode(/* in & out */ NodeType *&listPtr, /* in */ int delValue);
+
+// Return the modified file holding the updated business card information
+// Pre: Head is the location of the first element in a linked list that holds the data found in the file plus any data added by the user
+//      The fileName is correct and valid
+//      The file has been closed
+// Post: The file has been changed to reflect new linked list / info
+//       The file has been closed again
+void ReprintTheFile(/* in */ const NodeType *head, /* in */ string fileName);
 
 
 int main(){}
